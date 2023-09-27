@@ -1,33 +1,39 @@
-def merge_sort(A):
+def merge(A):
     if len(A) <= 1:
-        return A
+        return  # Base case: single-element array is already sorted
 
-    # Divide
     mid = len(A) // 2
     left_half = A[:mid]
     right_half = A[mid:]
 
-    # Recursive calls
-    left_half = merge_sort(left_half)
-    right_half = merge_sort(right_half)
+    # Sort the halves
+    merge(left_half)
+    merge(right_half)
 
-    # Merge
-    result = []
-    i = j = 0
+    # Merge the sorted halves
+    i = j = k = 0
     while i < len(left_half) and j < len(right_half):
         if left_half[i] <= right_half[j]:
-            A.swap(i, i + j)  # Swap and count
-            result.append(left_half[i])
+            A[k] = left_half[i]
             i += 1
         else:
-            A.swap(i + j, i + j)  # Swap and count
-            result.append(right_half[j])
+            A[k] = right_half[j]
             j += 1
+        k += 1
 
-    result.extend(left_half[i:])
-    result.extend(right_half[j:])
+    # If there are remaining elements in left_half
+    while i < len(left_half):
+        A[k] = left_half[i]
+        i += 1
+        k += 1
 
-    return result
+    # If there are remaining elements in right_half
+    while j < len(right_half):
+        A[k] = right_half[j]
+        j += 1
+        k += 1
 
-# Usage:
-# Call merge_sort(A) with your custom A data structure to sort an array.
+    return A  # Return the sorted list
+
+# Run all sorting algorithms and create .out files
+# def run_algs_part2(A, infilename):
