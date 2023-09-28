@@ -12,7 +12,7 @@ ALGS1 = [insertion.sort, merge.merge]
 # Put the sorting algorithms under test for part 2 here
 ALGS2 = [insertion.sort, merge.merge]
 # Time limit for a single sorting in milliseconds
-TIME_LIMIT_MS = 1000
+TIME_LIMIT_MS = 100
 # How much n grows each iteration for part 2
 INCREMENT = 1
 
