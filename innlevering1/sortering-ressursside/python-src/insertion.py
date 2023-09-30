@@ -2,7 +2,6 @@ from countswaps import CountSwaps
 
 
 def sort(A):
-    A = CountSwaps(A)
     for i in range(1, len(A)):
         temp = A[i]
         j = i-1
