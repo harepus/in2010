@@ -1,4 +1,4 @@
-#Kjøre programmet
+# Kjøre programmet
 ___
 På Unix:
 
