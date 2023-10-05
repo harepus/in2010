@@ -17,7 +17,7 @@ ___
 ```
 ___
 #### Output for Random:
-___
+
 ```
  n, insertion_cmp, insertion_swaps, insertion_time, merge_cmp, merge_swaps, merge_time
  0,             0,               0,              1,         0,           0,          0
